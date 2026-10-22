@@ -1,0 +1,13 @@
+[project]
+name = "nat-affixio-tool-gate"
+version = "0.1.0"
+description = "Adds a host-side allow/deny check before agent tool calls using the external AffixIO plugin"
+requires-python = ">=3.11"
+dependencies = [
+"nvidia-nat>=1.8",
+"affixio-nemo-plugin[nemo]",
+]
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
