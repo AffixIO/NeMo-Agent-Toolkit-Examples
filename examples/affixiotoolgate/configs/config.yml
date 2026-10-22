@@ -1,0 +1,14 @@
+middleware:
+affixio_gate:
+_type: affixioguard apikeyenv: AFFIXIOAPIKEY apibase: https://api.affix-io.com
+agentid: nemo-example-agent failclosed: true
+allowreview: false audit: true requestattestation: true
+policy:
+allowedactions: - nemotoolcall allowedtools:
+- protected_tool
+
+functions:
+protected_tool:
+_type:
+middleware:
+- affixio_gate
